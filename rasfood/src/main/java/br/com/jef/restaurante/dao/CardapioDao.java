@@ -12,7 +12,7 @@ public class CardapioDao {
 		this.entityManager = entityManager;
 	}
 
-	public void cadastrar(Object cardapio) {
+	public void cadastrar(Cardapio cardapio) {
 		entityManager.persist(cardapio);
 	}
 
@@ -20,11 +20,11 @@ public class CardapioDao {
 		return entityManager.find(Cardapio.class, id);
 	}
 
-	public void atualizar(Object cardapio) {
+	public void atualizar(Cardapio cardapio) {
 		entityManager.merge(cardapio);
 	}
 
-	public void remover(Object cardapio) {
+	public void remover(Cardapio cardapio) {
 		entityManager.remove(cardapio);
 	}
 
