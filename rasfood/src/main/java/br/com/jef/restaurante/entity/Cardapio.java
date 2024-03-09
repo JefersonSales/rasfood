@@ -5,8 +5,8 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
-@Table(name ="prato")
-public class Prato {
+@Table(name = "cardapio")
+public class Cardapio {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,6 +15,9 @@ public class Prato {
 	private String descricao;
 	private boolean disponivel;
 	private BigDecimal valor;
+
+	@ManyToOne
+	private Categoria categoria;
 
 	private Date dataCriacao = new Date();
 
@@ -68,7 +71,7 @@ public class Prato {
 
 	@Override
 	public String toString() {
-		return "Prato{" +
+		return "Cardapio{" +
 				"id=" + id +
 				", nome='" + nome + '\'' +
 				", descricao='" + descricao + '\'' +
