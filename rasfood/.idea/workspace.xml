@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="025c1deb-0bd2-435b-9d00-ce38571e4f28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/dao/CategoriaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/079212cfe52d54eaa22c0d242b2b0b9aebaac42e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/079212cfe52d54eaa22c0d242b2b0b9aebaac42e" afterDir="false" />
+    <list default="true" id="025c1deb-0bd2-435b-9d00-ce38571e4f28" name="Changes" comment="Atualização de código">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/entity/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/entity/Ordem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/util/CargaDeDadosUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/300a879dfe7b621afb43cb4580e6f80f0c8d3cb8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/300a879dfe7b621afb43cb4580e6f80f0c8d3cb8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5c239501e277f8d8c31a383a70a1af328c4553e6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5c239501e277f8d8c31a383a70a1af328c4553e6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f92ec0ac22485c6b65c362a78b1922a69f7b9f18" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f92ec0ac22485c6b65c362a78b1922a69f7b9f18" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/dao/CardapioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/dao/CardapioDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/dao/CategoriaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/dao/CategoriaDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/entity/Cardapio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/entity/Cardapio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/entity/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/entity/Categoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/service/teste/CardapioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/service/teste/CardapioService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +109,7 @@
       <updated>1709829083191</updated>
       <workItem from="1709829084289" duration="6302000" />
       <workItem from="1710009532170" duration="705000" />
-      <workItem from="1710010369958" duration="3182000" />
+      <workItem from="1710010369958" duration="9316000" />
     </task>
     <task id="LOCAL-00001" summary="Atualização de código">
       <option name="closed" value="true" />
@@ -117,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710011556692</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Atualização de código">
+      <option name="closed" value="true" />
+      <created>1710013684837</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710013684837</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

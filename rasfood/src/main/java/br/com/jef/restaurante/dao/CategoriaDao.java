@@ -3,6 +3,7 @@ package br.com.jef.restaurante.dao;
 import br.com.jef.restaurante.entity.Categoria;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
 public class CategoriaDao {
 	private final EntityManager entityManager;
@@ -17,6 +18,10 @@ public class CategoriaDao {
 
 	public Categoria consultarPorId(Integer id) {
 		return entityManager.find(Categoria.class, id);
+	}
+
+	public List<Categoria> consultarTodos() {
+		return entityManager.createQuery("SELECT c FROM Categoria c", Categoria.class).getResultList();
 	}
 
 	public void atualizar(Categoria categoria) {

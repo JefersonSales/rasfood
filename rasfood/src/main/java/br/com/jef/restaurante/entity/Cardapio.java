@@ -2,10 +2,11 @@ package br.com.jef.restaurante.entity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
-@Table(name = "cardapio")
+@Table(name = "cardapios")
 public class Cardapio {
 
 	@Id
@@ -16,23 +17,25 @@ public class Cardapio {
 	private boolean disponivel;
 	private BigDecimal valor;
 
+	@ManyToOne
+	private Categoria categoria;
+
+	@ManyToMany(mappedBy = "cardapioList")
+	private List<Ordem> ordens;
+
+	private LocalDateTime dataCriacao = LocalDateTime.now();
+
 	public Cardapio() {
 	}
 
-	public Cardapio(Integer id, String nome, String descricao, boolean disponivel, BigDecimal valor, Categoria categoria, Date dataCriacao) {
-		this.id = id;
+
+	public Cardapio(String nome, String descricao, boolean disponivel, BigDecimal valor, Categoria categoria) {
 		this.nome = nome;
 		this.descricao = descricao;
 		this.disponivel = disponivel;
 		this.valor = valor;
 		this.categoria = categoria;
-		this.dataCriacao = dataCriacao;
 	}
-
-	@ManyToOne
-	private Categoria categoria;
-
-	private Date dataCriacao = new Date();
 
 	public Integer getId() {
 		return id;
@@ -74,11 +77,15 @@ public class Cardapio {
 		this.valor = valor;
 	}
 
-	public Date getDataCriacao() {
+	public boolean isDisponivel() {
+		return disponivel;
+	}
+
+	public LocalDateTime getDataCriacao() {
 		return dataCriacao;
 	}
 
-	public void setDataCriacao(Date dataCriacao) {
+	public void setDataCriacao(LocalDateTime dataCriacao) {
 		this.dataCriacao = dataCriacao;
 	}
 
@@ -93,13 +100,13 @@ public class Cardapio {
 	@Override
 	public String toString() {
 		return "Cardapio{" +
-				"id= " + id +
-				", nome=' " + nome + '\'' +
-				", descricao=' " + descricao + '\'' +
-				", disponivel= " + disponivel +
-				", valor= " + valor +
-				", categoria= " + categoria +
-				", dataCriacao= " + dataCriacao +
+				"id=" + id +
+				", nome='" + nome + '\'' +
+				", descricao='" + descricao + '\'' +
+				", disponivel=" + disponivel +
+				", valor=" + valor +
+				", categoria=" + categoria +
+				", dataCriacao=" + dataCriacao +
 				'}';
 	}
 }
