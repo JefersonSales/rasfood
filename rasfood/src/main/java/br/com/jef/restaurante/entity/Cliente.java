@@ -1,27 +1,34 @@
 package br.com.jef.restaurante.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "clientes")
 public class Cliente {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String cpf;
 
 	private String nome;
 
-	private String cep;
 
-	public Cliente(String cpf, String nome, String cep) {
+	@OneToMany(mappedBy = "clientes", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private final List<Endereco> enderecos = new ArrayList<>();
+
+	public Cliente(String cpf, String nome) {
 		this.cpf = cpf;
 		this.nome = nome;
-		this.cep = cep;
 	}
 
 	public Cliente() {
 
+	}
+
+	public void addEndereco(Endereco endereco) {
+		endereco.setClientes(this);
+		this.enderecos.add(endereco);
 	}
 
 	public String getCpf() {
@@ -40,20 +47,12 @@ public class Cliente {
 		this.nome = nome;
 	}
 
-	public String getCep() {
-		return cep;
-	}
-
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-
 	@Override
 	public String toString() {
 		return "Cliente{" +
 				"cpf='" + cpf + '\'' +
 				", nome='" + nome + '\'' +
-				", cep='" + cep + '\'' +
+				", enderecos=" + enderecos +
 				'}';
 	}
 }

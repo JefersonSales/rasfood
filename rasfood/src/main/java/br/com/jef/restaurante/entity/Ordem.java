@@ -3,6 +3,7 @@ package br.com.jef.restaurante.entity;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -14,19 +15,16 @@ public class Ordem {
 	private Integer id;
 
 	@Column(name = "valor_total")
-	private BigDecimal valorTotal;
+	private BigDecimal valorTotal = BigDecimal.ZERO;
 
 	@Column(name = "data_de_criacao")
 	private LocalDateTime dataDeCriacao = LocalDateTime.now();
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Cliente cliente;
 
-	@ManyToMany
-	@JoinTable(name = "ordens_cardapios",
-			joinColumns = @JoinColumn(name = "ordens_id"),
-			inverseJoinColumns = @JoinColumn(name = "cardapios_id"))
-	private List<Cardapio> cardapioList;
+	@OneToMany(mappedBy = "ordem", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private List<OrdensCardapio> ordensCardapioList = new ArrayList<>();
 
 	public Ordem(Cliente cliente) {
 		this.cliente = cliente;
@@ -34,6 +32,13 @@ public class Ordem {
 
 	public Ordem() {
 
+	}
+
+	public void adicionarOrdensCardapio(OrdensCardapio ordensCardapio) {
+		this.ordensCardapioList.add(ordensCardapio);
+		ordensCardapio.setOrdem(this);
+		this.valorTotal = valorTotal.add(ordensCardapio.getValorDeRegistro()
+				.multiply(BigDecimal.valueOf(ordensCardapio.getQuantidade())));
 	}
 
 	public Integer getId() {
@@ -68,6 +73,14 @@ public class Ordem {
 		this.cliente = cliente;
 	}
 
+	public List<OrdensCardapio> getOrdensCardapioList() {
+		return ordensCardapioList;
+	}
+
+	public void setOrdensCardapioList(List<OrdensCardapio> ordensCardapioList) {
+		this.ordensCardapioList = ordensCardapioList;
+	}
+
 	@Override
 	public String toString() {
 		return "Ordem{" +
@@ -75,6 +88,7 @@ public class Ordem {
 				", valorTotal=" + valorTotal +
 				", dataDeCriacao=" + dataDeCriacao +
 				", cliente=" + cliente +
+				", ordensCardapioList=" + ordensCardapioList +
 				'}';
 	}
 }

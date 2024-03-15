@@ -3,7 +3,6 @@ package br.com.jef.restaurante.entity;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Table(name = "cardapios")
@@ -17,11 +16,8 @@ public class Cardapio {
 	private boolean disponivel;
 	private BigDecimal valor;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Categoria categoria;
-
-	@ManyToMany(mappedBy = "cardapioList")
-	private List<Ordem> ordens;
 
 	private LocalDateTime dataCriacao = LocalDateTime.now();
 

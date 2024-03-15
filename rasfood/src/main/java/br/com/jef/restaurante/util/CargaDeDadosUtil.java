@@ -11,6 +11,10 @@ import java.util.List;
 
 public class CargaDeDadosUtil {
 
+	private CargaDeDadosUtil() {
+		throw new IllegalStateException("Utility class");
+	}
+
 	public static void cadastrarCategorias(EntityManager entityManager) {
 		Categoria entrada = new Categoria("Entrada");
 		Categoria salada = new Categoria("Salada");
@@ -74,7 +78,8 @@ public class CargaDeDadosUtil {
 		cardapioDao.cadastrar(cafe);
 
 
-		entityManager.getTransaction().commit();
+		entityManager.flush();
 		entityManager.clear();
 	}
+
 }
