@@ -33,7 +33,8 @@ public class OrdemDao {
 	}
 
 	public Ordem joinFetchCliente(final Integer id) {
-		return entityManager.createQuery("SELECT o FROM Ordem o JOIN FETCH o.cliente WHERE o.id = :id ", Ordem.class).getSingleResult();
+		return entityManager.createQuery("SELECT o FROM Ordem o JOIN FETCH o.cliente WHERE o.id = :id ", Ordem.class)
+				.setParameter("id", id).getSingleResult();
 	}
 
 	public void atualizar(Ordem ordem) {

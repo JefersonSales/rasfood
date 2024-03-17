@@ -2,8 +2,12 @@ package br.com.jef.restaurante.util;
 
 import br.com.jef.restaurante.dao.CardapioDao;
 import br.com.jef.restaurante.dao.CategoriaDao;
+import br.com.jef.restaurante.dao.ClienteDao;
+import br.com.jef.restaurante.dao.EnderecoDao;
 import br.com.jef.restaurante.entity.Cardapio;
 import br.com.jef.restaurante.entity.Categoria;
+import br.com.jef.restaurante.entity.Cliente;
+import br.com.jef.restaurante.entity.Endereco;
 
 import javax.persistence.EntityManager;
 import java.math.BigDecimal;
@@ -77,6 +81,30 @@ public class CargaDeDadosUtil {
 		cardapioDao.cadastrar(bolo);
 		cardapioDao.cadastrar(cafe);
 
+
+		entityManager.flush();
+		entityManager.clear();
+	}
+
+	public static void cadastrarClientes(EntityManager entityManager) {
+		ClienteDao clienteDao = new ClienteDao(entityManager);
+		EnderecoDao enderecoDao = new EnderecoDao(entityManager);
+
+		Endereco augusta  = new Endereco("01234-567","Rua Augusta", "Augusta", "São Paulo", "SP");
+		Cliente cliente1 = new Cliente("123.456.789-00","cliente1@gmail.com", "Cliente 1");
+		cliente1.addEndereco(augusta);
+
+		Endereco paulista = new Endereco("12345-678", "Avenida Paulista", "Paulista", "São Paulo", "SP");
+		Cliente cliente2 = new Cliente("123.456.789-11","cliente2@gmail.com", "Cliente 2");
+		cliente2.addEndereco(paulista);
+
+		Endereco fariaLima = new Endereco("12345-678", "Avenida Faria Lima", "Faria Lima", "São Paulo", "SP");
+		Cliente cliente3 = new Cliente("123.456.789-22","cliente3@gmail.com", "Cliente 3");
+		cliente3.addEndereco(fariaLima);
+
+		clienteDao.cadastrar(cliente1);
+		clienteDao.cadastrar(cliente2);
+		clienteDao.cadastrar(cliente3);
 
 		entityManager.flush();
 		entityManager.clear();

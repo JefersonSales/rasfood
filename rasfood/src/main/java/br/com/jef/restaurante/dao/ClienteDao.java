@@ -24,6 +24,12 @@ public class ClienteDao {
 		return entityManager.createQuery("SELECT c FROM Cliente c", Cliente.class).getResultList();
 	}
 
+	public List<Cliente> consultarPorNome(final String nome) {
+		return entityManager.createQuery("SELECT c FROM Cliente c WHERE c.nome LIKE :nome", Cliente.class)
+				.setParameter("nome", "%"+nome+"%").getResultList();
+	}
+
+
 	public void atualizar(Cliente cliente) {
 		entityManager.merge(cliente);
 	}

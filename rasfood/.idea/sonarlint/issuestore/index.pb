@@ -344,3 +344,11 @@ Q.idea/sonarlint/securityhotspotstore/8/7/87f0b2614bb17897a6b268987d2a5316572d42
 ,.idea/inspectionProfiles/Project_Default.xml,4/9/496a238a6afa168dbaf6efd37bb459331589579c
 Å
 Q.idea/sonarlint/securityhotspotstore/d/e/dec1e74b32dd0a6d3ccea6af7ad79be6bb583daa,e/8/e85d0de4e3da05d69189806484637e04d7939815
+f
+6src/main/java/br/com/jef/restaurante/vo/ClienteVO.java,e/f/ef6be3cdcb9e75389565371eca47bc67f28be9d9
+i
+9src/main/java/br/com/jef/restaurante/dao/EnderecoDao.java,e/2/e2461a933148494aa0fd320cbb443a4f39671795
+h
+8src/main/java/br/com/jef/restaurante/entity/Contato.java,1/1/11b250262a7c22c2415d5a7433dee4f673daa968
+j
+:src/main/java/br/com/jef/restaurante/entity/ClienteId.java,2/b/2b1403ad2208fce434964db0bfcab094bb64fa86

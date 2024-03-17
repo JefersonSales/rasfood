@@ -4,8 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="025c1deb-0bd2-435b-9d00-ce38571e4f28" name="Changes" comment="Atualização de código">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="025c1deb-0bd2-435b-9d00-ce38571e4f28" name="Changes" comment="Adicionando gitignore">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/dao/EnderecoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/entity/ClienteId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/entity/Contato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/vo/ClienteVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f304aeb369398f8d1d6d654f82eddec9e0480e5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f304aeb369398f8d1d6d654f82eddec9e0480e5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e75e500848a0a023faa724fd18bc4d2d3f4a681" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e75e500848a0a023faa724fd18bc4d2d3f4a681" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/dao/ClienteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/dao/ClienteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/dao/OrdemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/dao/OrdemDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/entity/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/entity/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/util/CargaDeDadosUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jef/restaurante/util/CargaDeDadosUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +68,7 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "release/2023-11-24-atualization-code",
+    "last_opened_file_path": "/Users/jefersonsales/Projects/new-workspace/rasfood/rasfood",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -128,7 +143,8 @@
       <updated>1709829083191</updated>
       <workItem from="1709829084289" duration="6302000" />
       <workItem from="1710009532170" duration="705000" />
-      <workItem from="1710010369958" duration="24371000" />
+      <workItem from="1710010369958" duration="33245000" />
+      <workItem from="1710637531733" duration="68000" />
     </task>
     <task id="LOCAL-00001" summary="Atualização de código">
       <option name="closed" value="true" />
@@ -162,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710463650684</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adicionando gitignore">
+      <option name="closed" value="true" />
+      <created>1710463707777</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710463707777</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +206,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Atualização de código" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualização de código" />
+    <MESSAGE value="Adicionando gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando gitignore" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
